@@ -71,5 +71,30 @@
     ?>
 
     <p>Surface Area is:  <?= $surfaceArea ?> </p>
+
+
+
+ <h3>PHP CONSTANT</h3>
+
+  
+
+    <?php
+        echo "<h5>CONSTANT VARIABLE</h5>";
+
+        define("Hello","What new in PHP",true);
+
+        echo hello;
+    
+        echo "<h5>Global Constant</h5>";
+
+        define("HelloVar", "What something new in PHP",true);
+
+        function myTest(){
+            echo HelloVar;
+        }
+
+        myTest();
+
+    ?>
 </body>
 </html>
