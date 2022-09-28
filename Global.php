@@ -46,6 +46,46 @@
 <p> UserPassword: <?= @$res2  ?>  </p>
 
 
+<h3>Global Variables</h3>
+
+<?php
+$x = 54;
+$y = 89;
+
+function addition(){
+ $GLOBALS['c'] =  $GLOBALS['x'] + $GLOBALS['y'];
+}
+addition();
+echo $c;
+?>
+<h3>SERVER VARIABLE</h3>
+<?php
+  echo $_SERVER['SERVER_NAME'];
+  echo "<br>";
+  echo $_SERVER['SCRIPT_NAME'];
+  echo "<br>";
+  echo $_SERVER['HTTP_HOST'];
+?>
+<h3>GET VARIABLE</h3>
+<div class="container">
+  <h2>Inline form</h2>
+  <p>Make the viewport larger than 768px wide to see that all of the form elements are inline, left aligned, and the labels are alongside.</p>
+  <form class="form-inline" action="ex.php" method = "get">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+    <input type="submit" value = "submit" class="btn btn-default" name = "btn" >
+
+  </form>
+</div>
 
 </body>
 </html>
