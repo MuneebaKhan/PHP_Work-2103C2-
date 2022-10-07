@@ -12,16 +12,21 @@
     <h3>Sort Function Apply Index Array</h3>
 
 
-
     <?php
     $color = ['Blue', 'Orange', 'Red', 'Pink'];
     echo $color[2] . '<br>';
 
-    sort($color);
+    // sort($color);
     rsort($color);
+
+    array_push($color, 'LightBlue');
+    array_pop($color);
+
+    $noofElement = count($color);
+    echo $noofElement;
     echo '<ul>';
-    for ($i = 0; $i <= 3; $i++) {
-        echo "<li> Colors[$i] => $color[$i] </li>"; //$color[3]
+    for ($i = 0; $i < $noofElement; $i++) {
+        echo "<li> Color[$i] => $color[$i] </li>"; //$color[3]
     }
     echo '</ul>';
     ?>
